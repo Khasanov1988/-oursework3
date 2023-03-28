@@ -22,18 +22,20 @@ def load_json(filename):
 def executed_transactions(transactions):
     """
     Функция оставляет только успешные транзакции.
-    :param transactions: исходный список транзакций
-    :return: список успешных транзакций
+    :param transactions: Исходный список транзакций
+    :return: Список успешных транзакций
     """
     answer = []
     for transaction in transactions:
-        if 'date' in transaction:
+        if not transaction:
+            print("В исходных данных есть пустой словарь")
+        else:
             if transaction['state'] == "EXECUTED":
                 answer.append(transaction)
     return answer
 
 
-def date_format(transactions):
+def sort_by_date(transactions):
     """
     Функция конвертирует и добавляет в исходный список транзакций время с эпохи
     :param transactions: исходный список транзакций

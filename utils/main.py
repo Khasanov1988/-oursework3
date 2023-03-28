@@ -1,10 +1,10 @@
-from utils import load_json, date_format, executed_transactions
+from functions import load_json, sort_by_date, executed_transactions
 
 transactions = load_json('operations.json')
 print(transactions)
-execut_transactions = executed_transactions(transactions)
-print(execut_transactions)
-sorted_transactions = date_format(execut_transactions)
+ex_transactions = executed_transactions(transactions)
+print(ex_transactions)
+sorted_transactions = sort_by_date(ex_transactions)
 print(sorted_transactions)
 
 
