@@ -1,4 +1,4 @@
-from functions import load_json, sort_by_date, executed_transactions, print_report_item
+from utils.functions import load_json, sort_by_date, executed_transactions, print_report_item
 
 
 # Загружаем файл со всеми операциями в формате json
